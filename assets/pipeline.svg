@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <style>
+      .box {
+        fill: #161b22;
+        stroke: #00C2FF;
+        stroke-width: 2;
+        rx: 8;
+      }
+      .box-text {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        fill: #00C2FF;
+        text-anchor: middle;
+        font-weight: bold;
+      }
+      .arrow {
+        stroke: #8A2BE2;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .flow {
+        stroke-dasharray: 10;
+        animation: flow 1s linear infinite;
+      }
+      @keyframes flow {
+        to { stroke-dashoffset: -20; }
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#8A2BE2"/>
+    </marker>
+  </defs>
+  <rect width="900" height="200" fill="#0d1117"/>
+
+  <rect x="30" y="70" width="120" height="60" class="box"/>
+  <text x="90" y="105" class="box-text">Source</text>
+
+  <line x1="150" y1="100" x2="220" y2="100" class="arrow flow"/>
+
+  <rect x="220" y="70" width="120" height="60" class="box"/>
+  <text x="280" y="105" class="box-text">NASM</text>
+
+  <line x1="340" y1="100" x2="410" y2="100" class="arrow flow"/>
+
+  <rect x="410" y="70" width="120" height="60" class="box"/>
+  <text x="470" y="105" class="box-text">.COM File</text>
+
+  <line x1="530" y1="100" x2="600" y2="100" class="arrow flow"/>
+
+  <rect x="600" y="70" width="120" height="60" class="box"/>
+  <text x="660" y="105" class="box-text">DOSBox</text>
+
+  <line x1="720" y1="100" x2="790" y2="100" class="arrow flow"/>
+
+  <rect x="790" y="70" width="90" height="60" class="box"/>
+  <text x="835" y="105" class="box-text">Output</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <defs>
+    <style>
+      .layer {
+        fill: #161b22;
+        stroke: #00C2FF;
+        stroke-width: 2;
+        rx: 10;
+      }
+      .layer-text {
+        font-family: 'Courier New', monospace;
+        font-size: 16px;
+        fill: #00C2FF;
+        text-anchor: middle;
+        font-weight: bold;
+      }
+      .sub-text {
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        fill: #ffffff;
+        text-anchor: middle;
+        opacity: 0.7;
+      }
+      .connector {
+        stroke: #8A2BE2;
+        stroke-width: 2;
+        stroke-dasharray: 6;
+        animation: dash 1s linear infinite;
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -12; }
+      }
+      .pulse {
+        animation: pulseBox 2s ease-in-out infinite;
+      }
+      @keyframes pulseBox {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+    </style>
+  </defs>
+  <rect width="900" height="400" fill="#0d1117"/>
+
+  <rect x="50" y="30" width="800" height="80" class="layer pulse"/>
+  <text x="450" y="65" class="layer-text">🖥️ User Interface (CLI Menu)</text>
+  <text x="450" y="90" class="sub-text">Add Task · View Tasks · Exit</text>
+
+  <line x1="450" y1="110" x2="450" y2="150" class="connector"/>
+
+  <rect x="50" y="150" width="800" height="80" class="layer pulse"/>
+  <text x="450" y="185" class="layer-text">🎮 Program Logic (task.asm)</text>
+  <text x="450" y="210" class="sub-text">Register Manipulation · Buffer Handling · Jumps</text>
+
+  <line x1="450" y1="230" x2="450" y2="270" class="connector"/>
+
+  <rect x="50" y="270" width="800" height="80" class="layer pulse"/>
+  <text x="450" y="305" class="layer-text">💾 DOS Kernel (INT 21h)</text>
+  <text x="450" y="330" class="sub-text">File I/O · LSEEK · Read · Write · Close</text>
+
+  <line x1="450" y1="350" x2="450" y2="380" class="connector"/>
+
+  <rect x="300" y="370" width="300" height="25" class="layer"/>
+  <text x="450" y="388" class="sub-text">📄 data.txt (Persistent Storage)</text>
+</svg>
